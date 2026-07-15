@@ -1,0 +1,228 @@
+:root {
+  --void: #070a10;
+  --ink: #f4ead6;
+  --muted: #9a9b9d;
+  --cyan: #52e5ff;
+  --amber: #ffb545;
+  --danger: #ff4d3d;
+  --ivory: #d8c9a7;
+  --safe-top: max(12px, env(safe-area-inset-top));
+  --safe-bottom: max(16px, env(safe-area-inset-bottom));
+  --font-display: "Bebas Neue", Impact, sans-serif;
+  --font-ui: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  min-height: 100dvh;
+  background: var(--void);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: var(--safe-top) 18px var(--safe-bottom);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 18%, rgba(82, 229, 255, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 50% 100%, rgba(255, 181, 69, 0.1), transparent 50%),
+    var(--void);
+}
+
+.splash {
+  width: min(100%, 360px);
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  text-align: center;
+  animation: rise 520ms var(--ease) both;
+}
+
+.pulse-field {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 4px;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(82, 229, 255, 0.35);
+  border-radius: 50%;
+  animation: ping 2.8s var(--ease) infinite;
+}
+
+.r2 {
+  inset: 14px;
+  animation-delay: 0.45s;
+  border-color: rgba(82, 229, 255, 0.28);
+}
+
+.r3 {
+  inset: 28px;
+  animation-delay: 0.9s;
+  border-color: rgba(255, 181, 69, 0.35);
+}
+
+.core {
+  position: absolute;
+  inset: 46px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #9af2ff, var(--cyan) 45%, #1a7a8a 100%);
+  box-shadow:
+    0 0 24px rgba(82, 229, 255, 0.55),
+    0 0 2px rgba(255, 255, 255, 0.8) inset;
+}
+
+.brand-block {
+  display: grid;
+  gap: 6px;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--amber);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(64px, 18vw, 84px);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
+}
+
+.tagline {
+  margin: 0;
+  color: rgba(244, 234, 214, 0.78);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  max-width: 26ch;
+  justify-self: center;
+}
+
+.rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.rules li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid rgba(244, 234, 214, 0.16);
+  background: rgba(7, 10, 16, 0.55);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+
+.dot.ivory {
+  background: var(--ivory);
+}
+
+.dot.gap {
+  border: 1px dashed rgba(154, 155, 157, 0.95);
+}
+
+.dot.red {
+  background: var(--danger);
+  box-shadow: 0 0 8px rgba(255, 77, 61, 0.65);
+}
+
+#start-button {
+  width: min(100%, 280px);
+  border: none;
+  border-radius: 2px;
+  padding: 16px 22px;
+  background: linear-gradient(180deg, #ffe0a0 0%, var(--amber) 55%, #d8891a 100%);
+  color: #1a1206;
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  box-shadow:
+    0 10px 28px rgba(255, 181, 69, 0.28),
+    0 1px 0 rgba(255, 255, 255, 0.35) inset;
+  transition:
+    transform 140ms var(--ease),
+    filter 140ms var(--ease);
+}
+
+#start-button:hover {
+  filter: brightness(1.05);
+}
+
+#start-button:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.hook {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  max-width: 32ch;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.72);
+    opacity: 0.75;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash,
+  .ring {
+    animation: none !important;
+  }
+}

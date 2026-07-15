@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Sona</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="splash.css" />
+  </head>
+  <body>
+    <div class="splash" id="splash">
+      <div class="pulse-field" aria-hidden="true">
+        <span class="ring r1"></span>
+        <span class="ring r2"></span>
+        <span class="ring r3"></span>
+        <span class="core"></span>
+      </div>
+
+      <header class="brand-block">
+        <p class="kicker">DAILY CORE</p>
+        <h1>SONA</h1>
+        <p id="description" class="tagline">Spin. Drop. Don’t kiss the red.</p>
+      </header>
+
+      <ul class="rules" aria-label="How to play">
+        <li><i class="dot ivory"></i>Ivory lands</li>
+        <li><i class="dot gap"></i>Gaps drop</li>
+        <li><i class="dot red"></i>Red kills</li>
+      </ul>
+
+      <button id="start-button" type="button">PLAY TODAY</button>
+      <p id="hook-line" class="hook">Same tower for everyone until UTC midnight.</p>
+    </div>
+    <script type="module" src="splash.ts"></script>
+  </body>
+</html>
