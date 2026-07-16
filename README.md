@@ -2,7 +2,7 @@
 
 A 3D helix-drop built for Reddit’s **Games with a Hook** hackathon — played inside the post, shared with the whole sub every day.
 
-**Play:** [r/sonagame_dev](https://www.reddit.com/r/sonagame_dev) · **App:** [sonagame](https://developers.reddit.com/apps/sonagame)
+**Play (public):** [r/sonafall](https://www.reddit.com/r/sonafall) · **Demo post:** [Sona: how deep can you drop today?](https://www.reddit.com/r/sonafall/comments/1uxnxz5/sona_how_deep_can_you_drop_today/) · **App:** [sonagame](https://developers.reddit.com/apps/sonagame)
 
 ---
 
@@ -77,7 +77,7 @@ Client loop: fixed-step physics, ring shatter, danger callouts, hub/loadout/achi
 
 ## Play
 
-1. Open a Sonafall post on [r/sonagame_dev](https://www.reddit.com/r/sonagame_dev)
+1. Open the public demo: [r/sonafall](https://www.reddit.com/r/sonafall/comments/1uxnxz5/sona_how_deep_can_you_drop_today/)
 2. Tap **Drop in**
 3. Ivory safe · gaps fall · red kills
 4. Beat today’s depth. Protect the streak. New core at UTC midnight.
@@ -89,7 +89,7 @@ Client loop: fixed-step physics, ring shatter, danger callouts, hub/loadout/achi
 Upload pack: `assets/upload-pack/` (not applied by deploy).
 
 1. [App listing](https://developers.reddit.com/apps/sonagame) → media → profile + banner  
-2. [r/sonagame_dev](https://www.reddit.com/r/sonagame_dev) → Mod Tools → Look and feel → icon + banners  
+2. [r/sonafall](https://www.reddit.com/r/sonafall) → Mod Tools → Look and feel → icon + banners  
 
 | File | Use | Size |
 | --- | --- | --- |
@@ -116,5 +116,5 @@ Requires **Node 22+**.
 | Field | Value |
 | ----- | ----- |
 | App | https://developers.reddit.com/apps/sonagame |
-| Demo sub | https://www.reddit.com/r/sonagame_dev |
-| Demo post | Mod menu → **Create Sona post** |
+| Demo sub (public) | https://www.reddit.com/r/sonafall |
+| Demo post | https://www.reddit.com/r/sonafall/comments/1uxnxz5/sona_how_deep_can_you_drop_today/ |
